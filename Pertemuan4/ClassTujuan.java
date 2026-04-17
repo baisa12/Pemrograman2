@@ -1,40 +1,41 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class LatPanggil extends JFrame {
+public class ClassTujuan extends JFrame {
     
-    JLabel labelJudul;
-    JButton btnPanggil;
+    JLabel labelJudul, labelNim, labelNama;
+    JTextField txtNim, txtNama;
 
-    public LatPanggil() {
-        setTitle("Menu Utama Panggil Frame");
-        setSize(400, 200);
+    public ClassTujuan() {
+        setTitle("Frame Tujuan");
+        setSize(400, 250);
         setLayout(null);
-        // EXIT_ON_CLOSE agar saat jendela ini ditutup, program berhenti
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        // PENTING: Gunakan DISPOSE_ON_CLOSE. 
+        // Supaya kalau jendela ini disilang (close), menu utamanya tidak ikut tertutup.
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null); 
 
-        // Membuat tulisan judul
-        labelJudul = new JLabel("MEMANGGIL - MENAMPILKAN FRAME LAIN", SwingConstants.CENTER);
-        labelJudul.setBounds(20, 30, 350, 25);
+        // Membuat komponen
+        labelJudul = new JLabel("FRAME YANG DIPANGGIL", SwingConstants.CENTER);
+        labelJudul.setBounds(50, 20, 300, 25);
         add(labelJudul);
 
-        // Membuat tombol
-        btnPanggil = new JButton("PANGGIL FRAME");
-        btnPanggil.setBounds(100, 80, 180, 30);
-        add(btnPanggil);
+        labelNim = new JLabel("NIM");
+        labelNim.setBounds(50, 70, 120, 25);
+        add(labelNim);
 
-        // Logika saat tombol diklik
-        btnPanggil.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Baris kode ini berfungsi memanggil dan memunculkan classTujuan
-                new ClassTujuan().setVisible(true);
-            }
-        });
-    }
+        txtNim = new JTextField();
+        txtNim.setBounds(180, 70, 150, 25);
+        add(txtNim);
 
-    public static void main(String[] args) {
-        new LatPanggil().setVisible(true);
+        labelNama = new JLabel("Nama Mahasiswa");
+        labelNama.setBounds(50, 110, 120, 25);
+        add(labelNama);
+
+        txtNama = new JTextField();
+        txtNama.setBounds(180, 110, 150, 25);
+        add(txtNama);
     }
+    
+    // File ini tidak butuh public static void main karena dia dipanggil oleh file LatPanggil
 }

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8893c2bb-8816-4e77-b9c5-78352fcb866b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM datamhs]]>
+	</queryString>
+	<field name="nim" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="283" y="0" width="288" height="35" uuid="961c646f-66c1-40e9-adb7-beda36ca4ae9"/>
+				<text><![CDATA[DAFTAR NILAI MAHASISWA SEMESTER GENAP
+UNIV. PAMULANG - TANGERANG SELATAN]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="646" y="15" width="100" height="20" uuid="98bfb6d3-0f5b-4d39-9604-dcc9cdef3327"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="95" y="2" width="100" height="20" uuid="db8e3dd0-02e7-434b-a130-c6fd41d691db"/>
+				<text><![CDATA[nim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="2" width="100" height="20" uuid="c23bfcfc-cd23-45a9-b853-4aa1999e02a9"/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="2" width="100" height="20" uuid="cec80f62-e37e-4b15-bb01-e0cd075bf037"/>
+				<text><![CDATA[semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="2" width="100" height="20" uuid="c855cda5-f80b-40ee-a7c6-7f34adf64884"/>
+				<text><![CDATA[kelas]]></text>
+			</staticText>
+			<line>
+				<reportElement x="95" y="22" width="666" height="1" uuid="15a300ae-e882-418c-94b6-0ce720b00cda"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="95" y="0" width="100" height="20" uuid="c2764399-e064-4b02-8eda-bb726e5c1060"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="283" y="0" width="100" height="20" uuid="0f0a3439-5207-4372-a8bb-856fa81e2ea2"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="0" width="100" height="20" uuid="39626120-ca03-459f-854e-a2a7198c7350"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="661" y="0" width="100" height="20" uuid="8f98f84c-9470-4646-8ea0-b8e3e2409846"/>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="20" width="666" height="5" uuid="8fc50150-ec93-4315-ad2c-2dc92a7dea89"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

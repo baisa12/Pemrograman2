@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <servlet-name>MainForm</servlet-name>
+        <servlet-class>com.unpam.view.MainForm</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>com.unpam.controller.LoginController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>com.unpam.controller.LogoutController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>MahasiswaController</servlet-name>
+        <servlet-class>com.unpam.controller.MahasiswaController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>MataKuliahController</servlet-name>
+        <servlet-class>com.unpam.controller.MataKuliahController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>NilaiController</servlet-name>
+        <servlet-class>com.unpam.controller.NilaiController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainForm</servlet-name>
+        <url-pattern>/MainForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/LogoutController</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MahasiswaController</servlet-name>
+        <url-pattern>/MahasiswaController</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MataKuliahController</servlet-name>
+        <url-pattern>/MataKuliahController</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>NilaiController</servlet-name>
+        <url-pattern>/NilaiController</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

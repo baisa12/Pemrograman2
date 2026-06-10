@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #0044aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#menu {
+    text-align: left;
+    padding-left: 20px;
+    line-height: 24px;
+}
+
+nav {
+    width: 100%;
+    background: #333333;
+    margin: 0 auto;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #555555;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: #333333;
+    min-width: 150px;
+    z-index: 999;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+.form-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-table td {
+    padding: 6px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="password"],
+.form-table input[type="number"] {
+    width: 220px;
+    padding: 5px;
+}
+
+.form-table input[type="submit"] {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.data-table th {
+    background: #dddddd;
+    border: 1px solid #999999;
+    padding: 6px;
+}
+
+.data-table td {
+    border: 1px solid #999999;
+    padding: 6px;
+}
+
+.pesan-sukses {
+    background: #ddffdd;
+    border: 1px solid #44aa44;
+    color: #006600;
+    padding: 8px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.pesan-error {
+    background: #ffdddd;
+    border: 1px solid #cc4444;
+    color: #990000;
+    padding: 8px;
+    margin: 10px auto;
+    width: 80%;
+}
